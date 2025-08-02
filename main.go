@@ -12,8 +12,8 @@ func main() {
 	fmt.Println("___Калькулятор индекса массы тела___")
 	for {
 		userKg, userHeight := getUserInput()
-		IMT, error := calculateIMT(userKg, userHeight)
-		if error != nil {
+		IMT, err := calculateIMT(userKg, userHeight)
+		if err != nil {
 			panic("Не заданы параметры для расчета")
 		}
 		outputResult(IMT)
