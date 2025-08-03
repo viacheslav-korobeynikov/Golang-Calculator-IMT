@@ -14,7 +14,10 @@ func main() {
 		userKg, userHeight := getUserInput()
 		IMT, err := calculateIMT(userKg, userHeight)
 		if err != nil {
-			panic("Не заданы параметры для расчета")
+			fmt.Println("Введены некорректные параметры для расчета")
+			fmt.Println("Приложение завершило работу")
+			break
+			//panic("Не заданы параметры для расчета")
 		}
 		outputResult(IMT)
 		isRepeatCalculation := checkRepeatCalculation()
